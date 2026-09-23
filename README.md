@@ -104,8 +104,8 @@ Monitor unauthorized liquidations, grey-market imports, and replica sellers. Ext
 | `sellerInputs` | Array | `["2216555697343"]` | Target seller profile URLs (`https://www.goofish.com/personal?userId=...`), product listing URLs (`https://www.goofish.com/item?id=...`), mobile deeplinks (`fleamarket://...`), or numeric IDs. |
 | `includeListings` | Boolean | `true` | Extract product listings and inventory catalog from target sellers. |
 | `includeReviews` | Boolean | `true` | Extract buyer reviews, star ratings, and unboxing photos. |
-| `maxListings` | Number | `20` | Maximum listings to extract per seller (1 to 2,000; set `0` for unlimited). |
-| `maxReviews` | Number | `30` | Maximum reviews to extract per seller (1 to 1,000; set `0` for unlimited). |
+| `maxListings` | Number | `20` | Maximum product listings to extract per seller (supports extracting complete shops with thousands of items; set `0` for unlimited complete catalog extraction). |
+| `maxReviews` | Number | `30` | Maximum buyer reviews to extract per seller (supports extracting all historical reviews; set `0` for unlimited). |
 | `detailLevel` | String | `"summary"` | Listing extraction depth: `"summary"` (ultra-fast card data) or `"full"` (deep specs, brand, model, condition grade, and full description). |
 | `statusFilter` | String | `"all"` | Filter listings by status: `"all"` (everything), `"onsale"` (active stock only), or `"sold"` (completed sales only). |
 | `reviewFilter` | String | `"all"` | Filter buyer reviews: `"all"`, `"negative_only"` (disputes & complaints), `"with_photos"` (unboxing images), or `"positive_only"`. |
@@ -324,6 +324,12 @@ console.log(`Extracted ${items.length} seller profiles!`);
 
 ### How do I export to Excel or Google Sheets without broken columns?
 Set `"outputFormat": "tabular"`. This produces flat, spreadsheet-ready rows where each listing or review is its own record with seller metadata attached.
+
+---
+
+## 🔍 Related Keywords & Search Terms (SEO Index)
+
+`Goofish Scraper` • `Goofish API` • `Goofish Seller Scraper` • `Goofish Store Catalog` • `Goofish Reviews Scraper` • `Goofish Buyer Feedback` • `Goofish Unboxing Photos` • `Goofish Zhima Credit Check` • `Goofish Sesame Credit` • `Xianyu Scraper` • `Xianyu API` • `Xianyu Seller Profile` • `Xianyu Shop Scraper` • `Xianyu Reviews` • `Xianyu Dispute Scanner` • `Idlefish Scraper` • `Idle Fish API` • `Idlefish Seller Data` • `Alibaba Secondhand Scraper` • `Taobao Flea Market Scraper` • `闲鱼爬虫` • `闲鱼数据采集` • `闲鱼卖家信息采集` • `闲鱼评价采集` • `闲鱼店铺商品导出` • `闲鱼芝麻信用` • `闲鱼实名认证` • `闲鱼差评监控` • `Superbuy Goofish Check` • `Pandabuy Xianyu Seller Audit` • `Sugargoo Goofish Scraper` • `CSSBuy Seller Due Diligence` • `Mulebuy Xianyu Verification` • `CNfans Goofish` • `Kakobuy Goofish` • `Goofish Excel Export` • `Xianyu CSV Export` • `Goofish Google Sheets` • `Alibaba C2C Market Intelligence` • `Secondhand Luxury Scraper` • `Vintage Fashion Goofish` • `Used Electronics Wholesale Xianyu` • `Anime Figures Goofish Sourcing`
 
 ---
 
