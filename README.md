@@ -73,7 +73,7 @@ If you are using **Cursor**, **ChatGPT**, **Claude**, or autonomous agents, past
 ```text
 Apify Actor scraperpro/goofish-xianyu-seller-scraper. Extracts complete Goofish (闲鱼 / Xianyu / Idlefish) seller intelligence, product inventory catalogs, and buyer transaction reviews. Accepts seller profile URLs, product listing URLs (resolves seller automatically), fleamarket:// mobile deeplinks, or numeric seller IDs. Supports dual output formats: nested JSON (1 record per seller for APIs) or tabular flat rows (clean spreadsheets for Excel/CSV).
 Call via ApifyClient:
-client.actor("scraperpro/goofish-xianyu-seller-scraper").call(run_input={"sellerInputs":["https://www.goofish.com/personal?userId=2212259311853"],"includeListings":true,"includeReviews":true,"maxListings":20,"maxReviews":30,"outputFormat":"nested"})
+client.actor("scraperpro/goofish-xianyu-seller-scraper").call(run_input={"sellerInputs":["https://www.goofish.com/personal?spm=a21ybx.item.itemHeader.1.740c3da6vQDa24&userId=2216555697343"],"includeListings":true,"includeReviews":true,"maxListings":20,"maxReviews":30,"outputFormat":"nested"})
 ```
 
 ---
@@ -101,7 +101,7 @@ Monitor unauthorized liquidations, grey-market imports, and replica sellers. Ext
 
 | Parameter | Type | Default | Description |
 | :--- | :--- | :--- | :--- |
-| `sellerInputs` | Array | `["2212259311853"]` | Target seller profile URLs (`https://www.goofish.com/personal?userId=...`), product listing URLs (`https://www.goofish.com/item?id=...`), mobile deeplinks (`fleamarket://...`), or numeric IDs. |
+| `sellerInputs` | Array | `["2216555697343"]` | Target seller profile URLs (`https://www.goofish.com/personal?userId=...`), product listing URLs (`https://www.goofish.com/item?id=...`), mobile deeplinks (`fleamarket://...`), or numeric IDs. |
 | `includeListings` | Boolean | `true` | Extract product listings and inventory catalog from target sellers. |
 | `includeReviews` | Boolean | `true` | Extract buyer reviews, star ratings, and unboxing photos. |
 | `maxListings` | Number | `20` | Maximum listings to extract per seller (1 to 2,000; set `0` for unlimited). |
@@ -120,7 +120,7 @@ Monitor unauthorized liquidations, grey-market imports, and replica sellers. Ext
 ```json
 {
   "sellerInputs": [
-    "https://www.goofish.com/personal?userId=2212259311853"
+    "https://www.goofish.com/personal?spm=a21ybx.item.itemHeader.1.740c3da6vQDa24&userId=2216555697343"
   ],
   "includeListings": true,
   "includeReviews": true,
@@ -270,7 +270,7 @@ from apify_client import ApifyClient
 client = ApifyClient("YOUR_APIFY_API_TOKEN")
 
 run_input = {
-    "sellerInputs": ["https://www.goofish.com/personal?userId=2212259311853"],
+    "sellerInputs": ["https://www.goofish.com/personal?spm=a21ybx.item.itemHeader.1.740c3da6vQDa24&userId=2216555697343"],
     "includeListings": True,
     "includeReviews": True,
     "maxListings": 30,
@@ -295,7 +295,7 @@ const client = new ApifyClient({
 });
 
 const input = {
-    sellerInputs: ['https://www.goofish.com/personal?userId=2212259311853'],
+    sellerInputs: ['https://www.goofish.com/personal?spm=a21ybx.item.itemHeader.1.740c3da6vQDa24&userId=2216555697343'],
     includeListings: true,
     includeReviews: true,
     maxListings: 20,
