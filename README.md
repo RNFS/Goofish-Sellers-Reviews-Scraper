@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://unitbytes.com/assets/banners/unitbytes-goofish-xianyu-seller-inventory-reviews-scraper-banner.jpg" alt="Goofish (Xianyu) Sellers & Reviews Scraper API by UnitBytes" width="100%" />
+</p>
+
 # 🐟 Goofish Sellers & Reviews Scraper: 闲鱼 Xianyu Shop Profiles, Inventory & Feedback (Idlefish)
 
 <div align="center">
@@ -117,7 +121,7 @@ If you are using **Cursor**, **ChatGPT**, **Claude**, or autonomous agents, past
 ```text
 Apify Actor UnitBytes/goofish-xianyu-seller-scraper. Extracts complete Goofish (闲鱼 / Xianyu / Idlefish) seller intelligence, product inventory catalogs, and buyer transaction reviews. Accepts seller profile URLs, product listing URLs (resolves seller automatically), fleamarket:// mobile deeplinks, or numeric seller IDs. Supports dual output formats: nested JSON (1 record per seller for APIs) or tabular flat rows (clean spreadsheets for Excel/CSV).
 Call via ApifyClient:
-client.actor(\"unitbytes/goofish-xianyu-seller-scraper\").call(run_input={"sellerInputs":["https://www.goofish.com/personal?spm=a21ybx.item.itemHeader.1.740c3da6vQDa24&userId=2216555697343"],"includeListings":true,"includeReviews":true,"maxListings":20,"maxReviews":30,"outputFormat":"nested"})
+client.actor("unitbytes/goofish-xianyu-seller-scraper\").call(run_input={"sellerInputs":["https://www.goofish.com/personal?spm=a21ybx.item.itemHeader.1.740c3da6vQDa24&userId=2216555697343"],"includeListings":true,"includeReviews":true,"maxListings":20,"maxReviews":30,"outputFormat":"nested"})
 ```
 
 ---
@@ -323,7 +327,7 @@ run_input = {
     "outputFormat": "nested"
 }
 
-run = client.actor(\"unitbytes/goofish-xianyu-seller-scraper\").call(run_input=run_input)
+run = client.actor("unitbytes/goofish-xianyu-seller-scraper\").call(run_input=run_input)
 
 for item in client.dataset(run["defaultDatasetId"]).iterate_items():
     print(f"Seller: {item.get('displayName')} | Zhima: {item.get('creditBadge', {}).get('rating')}")
@@ -346,7 +350,7 @@ const input = {
     outputFormat: 'nested',
 };
 
-const run = await client.actor(\"unitbytes/goofish-xianyu-seller-scraper\").call(input);
+const run = await client.actor("unitbytes/goofish-xianyu-seller-scraper\").call(input);
 const { items } = await client.dataset(run.defaultDatasetId).listItems();
 
 console.log(`Extracted ${items.length} seller profiles!`);
@@ -380,3 +384,11 @@ Set `"outputFormat": "tabular"`. This produces flat, spreadsheet-ready rows wher
 ## 📄 License & Terms
 
 This repository contains documentation, visual assets, and integration guides for the **Goofish Sellers & Reviews Scraper** hosted on the [Apify Platform](https://apify.com/unitbytes/goofish-xianyu-seller-scraper?fpr=939u3w&fp_sid=gh_goofish_seller). Distributed under the MIT License.
+
+---
+
+## 💬 Enterprise Support & Custom Pipelines
+Need custom web data feeds, high-frequency scheduled runs, private cluster deployments, or dedicated SLAs?
+- 📧 **Direct Email**: [contact@unitbytes.com](mailto:contact@unitbytes.com)
+- 🌐 **Enterprise Platform**: [https://unitbytes.com](https://unitbytes.com)
+- 💡 **Data Engine Specs & Live Docs**: [https://unitbytes.com/actors/goofish-xianyu-seller-scraper/](https://unitbytes.com/actors/goofish-xianyu-seller-scraper/)
